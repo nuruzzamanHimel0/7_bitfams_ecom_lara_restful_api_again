@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProductRequest;
+use App\Http\Requests\ProductUpdateRequest;
 use App\Http\Resources\Product\ProductCollection;
 use App\Http\Resources\Product\ProductResource;
 use App\Model\Product;
@@ -42,7 +43,7 @@ class ProductController extends Controller
     {
         $product = new Product();
         $product->name = $request->name;
-        $product->details = $request->details;
+        $product->details = $request->description;
         $product->price = $request->price;
         $product->stock = $request->stock;
         $product->discount = $request->discount;
@@ -87,7 +88,22 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+
+        $request->validate([
+            'name' => 'required|max:255|unique:products,name,'.$product->id,
+            'description' => 'required',
+            'price' => 'required|max:20',
+            'stock' => 'required|max:6',
+            'discount' => 'required|max:10',
+        ]);
+
+        $request['details'] = $request->description;
+        unset($request['description']);
+
+        $product->update($request->all());
+        return response()->json([
+            'data' => new ProductResource($product)
+        ],201);
     }
 
     /**
