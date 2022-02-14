@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Exceptions\ProductNotBelongsToUser;
 use App\Http\Requests\ProductRequest;
 use App\Http\Requests\ProductUpdateRequest;
 use App\Http\Resources\Product\ProductCollection;
 use App\Http\Resources\Product\ProductResource;
 use App\Model\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
 class ProductController extends Controller
@@ -87,8 +89,16 @@ class ProductController extends Controller
      * @param  \App\Model\Product  $product
      * @return \Illuminate\Http\Response
      */
+    public function productUserCheck($product){
+
+        if(Auth::user()->id !== $product->user_id ){
+            throw new ProductNotBelongsToUser;
+
+        }
+    }
     public function update(Request $request, Product $product)
     {
+        $this->productUserCheck($product);
 
         $request->validate([
             'name' => 'required|max:255|unique:products,name,'.$product->id,
@@ -97,6 +107,8 @@ class ProductController extends Controller
             'stock' => 'required|max:6',
             'discount' => 'required|max:10',
         ]);
+
+
 
         $request['details'] = $request->description;
         unset($request['description']);
@@ -115,9 +127,16 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
+        $this->productUserCheck($product);
+
         if($product->delete()){
             return response()->json(null,Response::HTTP_NO_CONTENT);
         }
         // return $product;
     }
+
+
+
+
+
 }
