@@ -1,0 +1,493 @@
+{
+	"id": "b372419b-843b-dbd9-e10a-40c86ddce74b",
+	"name": "EAPI",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"name": "Review",
+			"description": "",
+			"collectionId": "b372419b-843b-dbd9-e10a-40c86ddce74b",
+			"order": [
+				"91b7ba97-ee6c-b9ba-8dd1-a9e840b892ba",
+				"a0cfca80-f69d-5160-df71-af27c77159ad",
+				"00e93356-abaa-ca9e-9fe2-1036d522fdba",
+				"83b047f0-8184-2bbf-05dc-e907f730beb6"
+			],
+			"owner": 0,
+			"folders_order": [],
+			"id": "6e47b8b9-649d-393a-298d-4e92c7d681ac"
+		},
+		{
+			"name": "oauth",
+			"description": "",
+			"collectionId": "b372419b-843b-dbd9-e10a-40c86ddce74b",
+			"order": [
+				"9df055da-6503-73ba-c5fe-ad867e77098a",
+				"d23886a9-52e9-2dda-1ef5-4aadfb74e5a8"
+			],
+			"owner": 0,
+			"folders_order": [],
+			"id": "1dd5f18e-a18e-8aac-6dbb-2a7a9f2b7a49"
+		},
+		{
+			"name": "product",
+			"description": "",
+			"collectionId": "b372419b-843b-dbd9-e10a-40c86ddce74b",
+			"order": [
+				"1308accf-87fb-2758-61d3-543501947b53",
+				"75d00112-5801-2b42-c4b0-af08ac830a76",
+				"1a0ce33f-9936-41fb-9ab4-374fe6f2e63d",
+				"0d25e138-4e18-46a0-8db6-46c4741babe4",
+				"43d84a25-1038-6832-b805-cc1520e271be"
+			],
+			"owner": 0,
+			"folders_order": [],
+			"id": "0c56bc40-8ebb-bb18-e9aa-b2d2081de154"
+		}
+	],
+	"folders_order": [
+		"0c56bc40-8ebb-bb18-e9aa-b2d2081de154",
+		"6e47b8b9-649d-393a-298d-4e92c7d681ac",
+		"1dd5f18e-a18e-8aac-6dbb-2a7a9f2b7a49"
+	],
+	"timestamp": 1644681731320,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "00e93356-abaa-ca9e-9fe2-1036d522fdba",
+			"headers": "Accept: application/json\nContent-Type: application/json\nAuthorization: {{auth}}\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "{{auth}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/products/",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "b372419b-843b-dbd9-e10a-40c86ddce74b",
+			"data": null,
+			"dataMode": "params",
+			"name": "Review update",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1644761620667,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "6e47b8b9-649d-393a-298d-4e92c7d681ac",
+			"isFromCollection": true,
+			"collectionRequestId": "a0cfca80-f69d-5160-df71-af27c77159ad"
+		},
+		{
+			"id": "0d25e138-4e18-46a0-8db6-46c4741babe4",
+			"headers": "Accept: application/json\nContent-Type: application/json\nAuthorization: {{auth}}\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "{{auth}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/products/52",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "PUT",
+			"collectionId": "b372419b-843b-dbd9-e10a-40c86ddce74b",
+			"data": [],
+			"dataMode": "raw",
+			"name": "product update",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1644771729391,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "0c56bc40-8ebb-bb18-e9aa-b2d2081de154",
+			"rawModeData": "{\n\t \"name\": \"Nokia 1000\",\n        \"description\": \"Nokia In voluptatibus debitis provident. Dignissimos non et itaque sint doloremque. Provident assumenda doloremque autem quia illum. Minima officiis cumque debitis officiis.\",\n        \"price\": \"4200\",\n        \"stock\": 10,\n        \"discount\": \"3\"\n}"
+		},
+		{
+			"id": "1308accf-87fb-2758-61d3-543501947b53",
+			"headers": "",
+			"headerData": [],
+			"url": "http://127.0.0.1:8000/api/products/1",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "b372419b-843b-dbd9-e10a-40c86ddce74b",
+			"data": null,
+			"dataMode": "params",
+			"name": "single Product",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1644681877116,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "0c56bc40-8ebb-bb18-e9aa-b2d2081de154"
+		},
+		{
+			"id": "1a0ce33f-9936-41fb-9ab4-374fe6f2e63d",
+			"headers": "Accept: application/json\nContent-Type: application/json\nAuthorization: {{auth}}\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "{{auth}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/products/",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1644942226983,
+			"name": "Product Store",
+			"description": "",
+			"collectionId": "b372419b-843b-dbd9-e10a-40c86ddce74b",
+			"responses": [],
+			"rawModeData": "{\n\t \"name\": \"Nokia 100\",\n        \"description\": \"In voluptatibus debitis provident. Dignissimos non et itaque sint doloremque. Provident assumenda doloremque autem quia illum. Minima officiis cumque debitis officiis.\",\n        \"price\": \"4200\",\n        \"stock\": 10,\n        \"discount\": \"3\"\n}"
+		},
+		{
+			"id": "43d84a25-1038-6832-b805-cc1520e271be",
+			"headers": "Accept: application/json\nContent-Type: application/json\nAuthorization: {{auth}}\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "{{auth}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/products/51",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "DELETE",
+			"collectionId": "b372419b-843b-dbd9-e10a-40c86ddce74b",
+			"data": null,
+			"dataMode": "params",
+			"name": "Product Delete",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1644772340286,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "0c56bc40-8ebb-bb18-e9aa-b2d2081de154"
+		},
+		{
+			"id": "75d00112-5801-2b42-c4b0-af08ac830a76",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "",
+					"value": "",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/products/",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "b372419b-843b-dbd9-e10a-40c86ddce74b",
+			"data": [],
+			"dataMode": "raw",
+			"name": "All Product",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1644681777477,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "0c56bc40-8ebb-bb18-e9aa-b2d2081de154",
+			"rawModeData": "{\n\t\"item\" : {\n\t\t\"name\" : \"Take out the trush\"\n\t}\n}"
+		},
+		{
+			"id": "83b047f0-8184-2bbf-05dc-e907f730beb6",
+			"headers": "Accept: application/json\nContent-Type: application/json\nAuthorization: {{auth}}\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "{{auth}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/products/",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "b372419b-843b-dbd9-e10a-40c86ddce74b",
+			"data": null,
+			"dataMode": "params",
+			"name": "Review destroy",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1644761620667,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "6e47b8b9-649d-393a-298d-4e92c7d681ac",
+			"isFromCollection": true,
+			"collectionRequestId": "00e93356-abaa-ca9e-9fe2-1036d522fdba"
+		},
+		{
+			"id": "91b7ba97-ee6c-b9ba-8dd1-a9e840b892ba",
+			"headers": "",
+			"headerData": [],
+			"url": "http://127.0.0.1:8000/api/product/1/reviews",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "b372419b-843b-dbd9-e10a-40c86ddce74b",
+			"data": null,
+			"dataMode": "params",
+			"name": "Revies All perticular Product",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1644681943797,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "6e47b8b9-649d-393a-298d-4e92c7d681ac"
+		},
+		{
+			"id": "9df055da-6503-73ba-c5fe-ad867e77098a",
+			"headers": "Accept: application/json\nContent-Type: application/json\n//username: \n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "username",
+					"value": "",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://127.0.0.1:8000/oauth/token",
+			"folder": "1dd5f18e-a18e-8aac-6dbb-2a7a9f2b7a49",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1644858695571,
+			"name": "oauth token",
+			"description": "",
+			"collectionId": "b372419b-843b-dbd9-e10a-40c86ddce74b",
+			"responses": [],
+			"rawModeData": "{\n\t\"grant_type\" : \"password\",\n\t\"client_id\" : \"2\",\n\t\"client_secret\" : \"OAhkqBMuHXHrBwtOm6hYOitmwqKqygFA0hyJuT6u\",\n\t\"username\" : \"nuruzzaman.himel147@gmail.com\",\n\t\"password\" : \"password\"\n}"
+		},
+		{
+			"id": "a0cfca80-f69d-5160-df71-af27c77159ad",
+			"headers": "Accept: application/json\nContent-Type: application/json\nAuthorization: {{auth}}\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "{{auth}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/products/",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "b372419b-843b-dbd9-e10a-40c86ddce74b",
+			"data": null,
+			"dataMode": "params",
+			"name": "Review store",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1644761620667,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "6e47b8b9-649d-393a-298d-4e92c7d681ac",
+			"isFromCollection": true,
+			"collectionRequestId": "1a0ce33f-9936-41fb-9ab4-374fe6f2e63d"
+		},
+		{
+			"id": "d23886a9-52e9-2dda-1ef5-4aadfb74e5a8",
+			"headers": "Accept: application/json\nAuthorization: {{auth}}\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "{{auth}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/user",
+			"folder": "1dd5f18e-a18e-8aac-6dbb-2a7a9f2b7a49",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1644858692383,
+			"name": "authonticated user",
+			"description": "",
+			"collectionId": "b372419b-843b-dbd9-e10a-40c86ddce74b",
+			"responses": []
+		}
+	]
+}

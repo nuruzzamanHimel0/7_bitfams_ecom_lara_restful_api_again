@@ -1,0 +1,27 @@
+=> php artisan make:resource Product/ProductCollection
+
+=> php artisan make:resource Product/ProductResource
+
+
+
+----------------- Request --------------
+
+==> php artisan make:request ProductRequest
+
+
+############ ei project teke jaja siklam ###########
+
+1) migration y foreign key create
+
+2) factory O seeder
+
+3) API Resource er collection O resource
+
+4) From validation request
+
+5) HTTP fundaion Response.php
+
+6) Exception handelling & custom exception trait
+
+7) Lear how to make exception user command
+==> php artisan make:exception ProductNotBelongsToUser
