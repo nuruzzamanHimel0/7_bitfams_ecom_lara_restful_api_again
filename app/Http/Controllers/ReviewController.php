@@ -2,18 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ReviewStoreRequest;
 use App\Http\Resources\ReviewCollection;
+use App\Http\Resources\ReviewResource;
 use App\Model\Product;
 use App\Model\Review;
 use Illuminate\Http\Request;
 
 class ReviewController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
+    public function __construct()
+    {
+        $this->middleware('auth:api')->except('index','show');
+    }
+
     public function index(Product $product)
     {
         // return $product->reviews;
@@ -37,9 +40,18 @@ class ReviewController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ReviewStoreRequest $request,Product $product)
     {
-        //
+        $storeReview = Review::create([
+            'product_id' => $product->id,
+            'customer' => $request->customer,
+            'review' => $request->review,
+            'star' => $request->star
+        ]);
+        return response()->json([
+            "data" => new ReviewResource($storeReview)
+        ]);
+        return $product;
     }
 
     /**
