@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ReviewStoreRequest;
+use App\Http\Requests\ReviewUpdateRequest;
 use App\Http\Resources\ReviewCollection;
 use App\Http\Resources\ReviewResource;
 use App\Model\Product;
 use App\Model\Review;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class ReviewController extends Controller
 {
@@ -50,8 +52,8 @@ class ReviewController extends Controller
         ]);
         return response()->json([
             "data" => new ReviewResource($storeReview)
-        ]);
-        return $product;
+        ],Response::HTTP_CREATED);
+        // return $product;
     }
 
     /**
@@ -83,9 +85,13 @@ class ReviewController extends Controller
      * @param  \App\Model\Review  $review
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Review $review)
+    public function update(ReviewUpdateRequest $request,Product $product ,Review $review)
     {
-        //
+        $review->update($request->all());
+        return response()->json([
+            "data" => new ReviewResource($review)
+        ],Response::HTTP_CREATED);
+        // return $request->all();
     }
 
     /**
@@ -94,8 +100,10 @@ class ReviewController extends Controller
      * @param  \App\Model\Review  $review
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Review $review)
+    public function destroy(Product $product ,Review $review)
     {
-        //
+        $review->delete();
+        return response()->json([null],Response::HTTP_NO_CONTENT);
+        // return $review;
     }
 }
