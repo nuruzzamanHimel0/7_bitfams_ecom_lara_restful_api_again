@@ -108,8 +108,6 @@ class ProductController extends Controller
             'discount' => 'required|max:10',
         ]);
 
-
-
         $request['details'] = $request->description;
         unset($request['description']);
 
