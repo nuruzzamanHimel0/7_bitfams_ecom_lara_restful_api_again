@@ -1,3 +1,4 @@
+################## API RESOURCE LARAVEL #########################
 => php artisan make:resource Product/ProductCollection
 
 => php artisan make:resource Product/ProductResource
